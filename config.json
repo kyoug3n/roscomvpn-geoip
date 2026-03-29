@@ -153,11 +153,59 @@
         "ipv4": "./geolite2/GeoLite2-ASN-Blocks-IPv4.csv",
         "ipv6": "./geolite2/GeoLite2-ASN-Blocks-IPv6.csv",
         "wantedList": {
+          "cloudflare": [
+            "AS395747",
+            "AS394536",
+            "AS209242",
+            "AS203898",
+            "AS202623",
+            "AS14789",
+            "AS139242",
+            "AS133877",
+            "AS13335",
+            "AS132892"
+          ],
           "rostelecom": [
             "AS12389",
             "AS42610"
-          ]
+          ],
+          "telegram": ["AS62041", "AS62014", "AS59930", "AS44907", "AS211157"],
+          "twitter": ["AS8945", "AS63179", "AS54888", "AS35995", "AS13414"],
+          "fastly": ["AS54113", "AS394192"]
         }
+      }
+    },
+    {
+      "type": "text",
+      "action": "add",
+      "args": {
+        "name": "cloudflare",
+        "uri": "https://www.cloudflare.com/ips-v4"
+      }
+    },
+    {
+      "type": "text",
+      "action": "add",
+      "args": {
+        "name": "cloudflare",
+        "uri": "https://www.cloudflare.com/ips-v6"
+      }
+    },
+    {
+      "type": "text",
+      "action": "add",
+      "args": {
+        "name": "telegram",
+        "uri": "https://core.telegram.org/resources/cidr.txt"
+      }
+    },
+    {
+      "type": "json",
+      "action": "add",
+      "args": {
+        "name": "fastly",
+        "uri": "https://api.fastly.com/public-ip-list",
+        "jsonPath": ["addresses", "ipv6_addresses"]
       }
     },
     {
